@@ -8,9 +8,9 @@
  */
 public class Bruch {
 
-	private long zaehler;
-	private long nenner;
-	private long ganze;
+	private long zaehler = 0;
+	private long nenner = 0;
+	private long ganze = 0;
 
 	public Bruch(long zaehler, long nenner) {
 		this.zaehler = zaehler;
@@ -94,14 +94,18 @@ public class Bruch {
 	public long getGanze() {
 		return ganze;
 	}
-	
-	public String toString(Bruch b){
-		
-		return null;
+
+	public String toString() {
+		String bruch = "";
+		if (ganze == 0) {
+			bruch += zaehler + "/" + nenner;
+		} else
+			bruch += ganze + " " + zaehler + "/" + nenner;
+		return bruch;
 	}
-	
-	public static boolean equals(Bruch b){
-		
+
+	public static boolean equals(Bruch b) {
+
 		return true;
 	}
 }
